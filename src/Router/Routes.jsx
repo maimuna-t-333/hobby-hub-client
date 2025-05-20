@@ -9,6 +9,7 @@ import CreateGroup from "../Pages/CreateGroup";
 import AllGroup from "../Pages/AllGroup";
 import MyGroup from "../Pages/MyGroup";
 import Home from "../Pages/Home";
+import Error from "../Pages/Error";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
     {
         path: 'myGroup',
         element: <MyGroup></MyGroup>
+    },
+    {
+        path:'/*',
+        element: <Error></Error>
     }
 ]);
 
