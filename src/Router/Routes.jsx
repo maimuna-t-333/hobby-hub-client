@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         element: <CreateGroup></CreateGroup>
     },
     {
-        path: 'myGroups',
+        path: 'myGroup',
         element: <MyGroup></MyGroup>
     }
 ]);
