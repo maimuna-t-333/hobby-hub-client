@@ -16,6 +16,7 @@ const Navbar = () => {
                             className="menu menu-sm dropdown-content bg-base-300  rounded-box z-1 mt-3 w-52 p-2 shadow ">
                             <Link to='/'>Home</Link>
                             <Link to='/allGroups'>All groups</Link>
+
                             <Link to='/createGroup'>Create Group</Link>
                             <Link to='/myGroup'>My Groups</Link>
                         </ul>
@@ -23,11 +24,14 @@ const Navbar = () => {
                     <h2 className='text-[#3A0519] text-xl font-bold'>HobbyHub</h2>
                     <img className='w-12 h-12 ml-2 ' src={logo} alt="" />
                 </div>
-                <div className="navbar-center space-x-4 text-[#3A0519] ">
+                <div className="navbar-center space-x-4 text-[#3A0519] hidden md:flex ">
                     <Link to='/'>Home</Link>
                     <Link to='/allGroups'>All groups</Link>
+
                     <Link to='/createGroup'>Create Group</Link>
                     <Link to='/myGroup'>My Groups</Link>
+                    
+
 
                 </div>
                 <div className="navbar-end">
