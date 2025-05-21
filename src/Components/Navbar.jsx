@@ -30,11 +30,26 @@ const Navbar = () => {
 
                     <Link to='/createGroup'>Create Group</Link>
                     <Link to='/myGroup'>My Groups</Link>
-                    
+
 
 
                 </div>
                 <div className="navbar-end">
+                    <label className="swap swap-rotate fixed top-4 right-4 z-50">
+                        {/* this hidden checkbox controls the state */}
+                        <input type="checkbox" className="theme-controller" value="dark" />
+
+                        {/* sun icon (light mode) */}
+                        <svg className="swap-off fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M5.64,17l-.71..." />
+                        </svg>
+
+                        {/* moon icon (dark mode) */}
+                        <svg className="swap-on fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21.64,13a1,1..." />
+                        </svg>
+                    </label>
+
                     <Link className='text-[#3A0519] text-xl font-bold hover:cursor-pointer' to='/login'>Login</Link>
                 </div>
             </div>
@@ -43,3 +58,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
