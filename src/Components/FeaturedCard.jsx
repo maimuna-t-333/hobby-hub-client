@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const FeaturedCard = ({ hobby }) => {
     return (
@@ -31,9 +32,12 @@ const FeaturedCard = ({ hobby }) => {
                 </p>
 
                 <div className="pt-3">
+                    <Link to='/group/:id'>
                     <button className="px-4 py-2 rounded-full bg-[#987070] text-white text-sm hover:bg-[#944E63] transition">
                         View Details
                     </button>
+                    </Link>
+                    
                 </div>
             </div>
         </div>
