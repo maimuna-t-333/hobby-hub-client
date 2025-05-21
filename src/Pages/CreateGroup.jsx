@@ -35,7 +35,7 @@ const CreateGroup = () => {
             })
     }
     return (
-        <div className='bg-[#F8EDE3]'>
+        <div className='bg-[#EBE3D5]'>
             <Navbar></Navbar>
             <div className='max-w-7xl mx-auto pb-30 pt-10'>
                 <div className="text-center mb-10">
@@ -45,7 +45,7 @@ const CreateGroup = () => {
                     </p>
                 </div>
 
-                <form onSubmit={handleCreateGroup} className="space-y-6 bg-base-200 p-8 rounded shadow-md pt-10">
+                <form onSubmit={handleCreateGroup} className="space-y-6 bg-[#DBB5B5] p-8 rounded shadow-md pt-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <input name="groupName" type="text" placeholder="Group Name" className="input input-bordered w-full" required />
                         <select name="hobbyCategory" className="select select-bordered w-full" required>
@@ -69,7 +69,7 @@ const CreateGroup = () => {
                     </div>
                     <textarea name="description" className="textarea textarea-bordered w-full mt-4" placeholder="Group Description" rows="4" required></textarea>
                     <div className="text-center">
-                        <button type="submit" className="btn bg-[#3A0519] text-white hover:bg-[#5a112a]">Create Group</button>
+                        <button type="submit" className="btn border-none bg-[#987070] text-white hover:bg-[#944E63]">Create Group</button>
                     </div>
                 </form>
 
