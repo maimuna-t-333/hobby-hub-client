@@ -37,7 +37,7 @@ const CreateGroup = () => {
             })
     }
     return (
-        <div className='bg-[#EBE3D5]'>
+        <div className='bg-[#e1f2db]'>
             <Navbar></Navbar>
             <div className='max-w-7xl mx-auto pb-30 pt-10'>
                 <div className="text-center mb-10">
