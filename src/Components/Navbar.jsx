@@ -1,56 +1,87 @@
-import React from 'react';
-import { Link } from 'react-router';
-import logo from '../assets/logo.png'
+
+import React, { useContext } from 'react';
+import { Link} from 'react-router'; 
+import logo from '../assets/logo.png';
+import { AuthContext } from '../Context/AuthProvider';
+
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+   
+    const handleLogout = () => {
+        logOut()
+        .then(() => {
+            console.log('Logged out');
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+    };
+
     return (
-        <div className=''>
+        <div className="">
             <div className="navbar bg-[#DBB5B5] shadow-sm p-6">
+               
                 <div className="navbar-start">
                     <div className="dropdown text-[#3A0519]">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-300  rounded-box z-1 mt-3 w-52 p-2 shadow ">
-                            <Link to='/'>Home</Link>
-                            <Link to='/allGroups'>All groups</Link>
-
-                            <Link to='/createGroup'>Create Group</Link>
-                            <Link to='/myGroup'>My Groups</Link>
+                            className="menu menu-sm dropdown-content bg-base-300 rounded-box z-10 mt-3 w-52 p-2 shadow text-[#3A0519]"
+                        >
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/allGroups">All Groups</Link></li>
+                            {user && (
+                                <>
+                                    <li><Link to="/createGroup">Create Group</Link></li>
+                                    <li><Link to="/myGroup">My Groups</Link></li>
+                                </>
+                            )}
                         </ul>
                     </div>
-                    <h2 className='text-[#3A0519] text-xl font-bold'>HobbyHub</h2>
-                    <img className='w-12 h-12 ml-2 ' src={logo} alt="" />
+                    <h2 className="text-[#3A0519] text-xl font-bold ml-2">HobbyHub</h2>
+                    <img className="w-12 h-12 ml-2" src={logo} alt="HobbyHub Logo" />
                 </div>
-                <div className="navbar-center space-x-4 text-[#3A0519] hidden md:flex ">
-                    <Link to='/'>Home</Link>
-                    <Link to='/allGroups'>All groups</Link>
 
-                    <Link to='/createGroup'>Create Group</Link>
-                    <Link to='/myGroup'>My Groups</Link>
-
-
-
+                
+                <div className="navbar-center space-x-4 text-[#3A0519] hidden md:flex">
+                    <Link to="/">Home</Link>
+                    <Link to="/allGroups">All Groups</Link>
+                    {user && (
+                        <>
+                            <Link to="/createGroup">Create Group</Link>
+                            <Link to="/myGroup">My Groups</Link>
+                        </>
+                    )}
                 </div>
-                <div className="navbar-end">
-                    <label className="swap swap-rotate fixed top-4 right-4 z-50">
-                        {/* this hidden checkbox controls the state */}
-                        <input type="checkbox" className="theme-controller" value="dark" />
 
-                        {/* sun icon (light mode) */}
-                        <svg className="swap-off fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M5.64,17l-.71..." />
-                        </svg>
+            
+                <div className="navbar-end flex items-center gap-4">
 
-                        {/* moon icon (dark mode) */}
-                        <svg className="swap-on fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M21.64,13a1,1..." />
-                        </svg>
-                    </label>
-
-                    <Link className='text-[#3A0519] text-xl font-bold hover:cursor-pointer' to='/login'>Login</Link>
+                    {!user ? (
+                        <Link className="text-[#3A0519] text-xl font-bold" to="/login">Login</Link>
+                    ) : (
+                        <div className="flex items-center gap-4">
+                         
+                            <div className="tooltip tooltip-bottom" data-tip={user.displayName || 'User'}>
+                                <img
+                                    src={user.photoURL || 'https://i.ibb.co/2n4d3kR/default-avatar.png'}
+                                    alt="User Avatar"
+                                    className="w-10 h-10 rounded-full border-2 border-white"
+                                />
+                            </div>
+                            <button
+                                onClick={handleLogout}
+                                className="btn btn-sm btn-outline border-[#3A0519] text-[#3A0519]"
+                            >
+                                Logout
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
@@ -58,4 +89,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 

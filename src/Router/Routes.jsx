@@ -11,6 +11,7 @@ import MyGroup from "../Pages/MyGroup";
 import Home from "../Pages/Home";
 import Error from "../Pages/Error";
 import GroupDetails from "../Pages/GroupDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,6 @@ const router = createBrowserRouter([
                 index: true,
                 element: <Home></Home>,
                 loader:()=>fetch('http://localhost:3000/hobby'),
-              
             },
             {
                 path: 'allGroups',
@@ -32,11 +32,12 @@ const router = createBrowserRouter([
     {
         path: 'login',
         element: <Login></Login>,
-        children: [{
+         },
+        {
             path: 'register',
             element: <Register></Register>
-        }]
-    },
+        },
+   
     {
         path: 'createGroup',
         element: <CreateGroup></CreateGroup>
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
     {
         path:'/*',
         element: <Error></Error>
+    },
+    {
+        path:'/hobby/:id',
+        element: <PrivateRoute><GroupDetails></GroupDetails></PrivateRoute>
     }
 ]);
 

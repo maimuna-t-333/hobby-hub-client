@@ -1,22 +1,27 @@
-
-import React from 'react';
-import { useLoaderData } from 'react-router';
-import FeaturedCard from '../Components/FeaturedCard';
+import React, { useEffect, useState } from 'react';
+import FeaturedCard from './FeaturedCard';
 
 const Featured = () => {
-    const hobbies = useLoaderData();
-    console.log(hobbies);
+  const [hobbies, setHobbies] = useState([]);
 
-    return (
-        <div className="max-w-7xl mx-auto px-4 py-12">
-            <h1 className="text-4xl font-bold text-center text-[#3A0519] mb-10">Featured Hobby Groups</h1>
-            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                {hobbies.map((hobby) => (
-                    <FeaturedCard key={hobby._id} hobby={hobby} />
-                ))}
-            </div>
-        </div>
-    );
+  useEffect(() => {
+    fetch('http://localhost:3000/hobby')
+      .then(res => res.json())
+      .then(data => setHobbies(data))
+      .catch(err => console.error(err));
+  }, []);
+
+  return (
+    <div className="max-w-7xl mx-auto py-10 px-4">
+      <h1 className="text-3xl font-bold mb-6 text-center text-[#3A0519]">Featured Hobby Groups</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {hobbies.slice(0, 6).map(hobby => (
+          <FeaturedCard key={hobby._id} hobby={hobby} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Featured;
+

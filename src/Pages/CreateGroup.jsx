@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../Components/Navbar';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../Context/AuthProvider';
 
 
 const CreateGroup = () => {
+    const { user } = useContext(AuthContext)
     const handleCreateGroup = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -21,7 +23,7 @@ const CreateGroup = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log('hobby added successfully',data)
+                console.log('hobby added successfully', data)
                 if (data.insertedId) {
                     Swal.fire({
                         position: "top-end",
@@ -49,7 +51,7 @@ const CreateGroup = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <input name="groupName" type="text" placeholder="Group Name" className="input input-bordered w-full" required />
                         <select name="hobbyCategory" className="select select-bordered w-full" required>
-                            <option disabled selected>Hobby Category</option>
+                            <option value=''>  Hobby Category</option>
                             <option>Drawing & Painting</option>
                             <option>Photography</option>
                             <option>Video Gaming</option>
@@ -63,8 +65,10 @@ const CreateGroup = () => {
                         <input name="maxMembers" type="number" placeholder="Max Members" className="input input-bordered w-full" required />
                         <input name="startDate" type="date" className="input input-bordered w-full" required />
                         <input name="imageUrl" type="text" placeholder="Image URL" className="input input-bordered w-full" required />
-                        <input name="userName" type="text" readOnly className="input input-bordered w-full bg-gray-100" />
-                        <input name="userEmail" type="email" readOnly className="input input-bordered w-full bg-gray-100" />
+                        {/* <input name="userName" type="text" readOnly className="input input-bordered w-full bg-gray-100" /> */}
+                        {/* <input name="userEmail" type="email" readOnly className="input input-bordered w-full bg-gray-100" /> */}
+                        <input name="userName" type="text" readOnly value={user?.displayName || ''} className="input input-bordered w-full bg-gray-100" />
+                        <input name="userEmail" type="email" readOnly value={user?.email || ''} className="input input-bordered w-full bg-gray-100" />
 
                     </div>
                     <textarea name="description" className="textarea textarea-bordered w-full mt-4" placeholder="Group Description" rows="4" required></textarea>

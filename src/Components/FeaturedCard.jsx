@@ -32,12 +32,11 @@ const FeaturedCard = ({ hobby }) => {
                 </p>
 
                 <div className="pt-3">
-                    <Link to='/group/:id'>
-                    <button className="px-4 py-2 rounded-full bg-[#987070] text-white text-sm hover:bg-[#944E63] transition">
-                        View Details
-                    </button>
+                    <Link to={`/group/${hobby._id}`}>
+                        <button className="px-4 py-2 rounded-full bg-[#987070] text-white text-sm hover:bg-[#944E63] transition">
+                            View Details
+                        </button>
                     </Link>
-                    
                 </div>
             </div>
         </div>
