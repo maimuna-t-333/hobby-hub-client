@@ -76,7 +76,7 @@ const Navbar = () => {
                             </div>
                             <button
                                 onClick={handleLogout}
-                                className="btn btn-sm btn-outline border-[#3A0519] text-[#3A0519]"
+                                className="btn font-bold btn-sm btn-outline border-[#3A0519] text-[#3A0519]"
                             >
                                 Logout
                             </button>

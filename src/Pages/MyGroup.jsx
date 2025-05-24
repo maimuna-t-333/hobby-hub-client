@@ -53,7 +53,7 @@ const MyGroup = () => {
     };
 
     return (
-        <div className='bg-[#EAEFEF]'>
+        <div className='bg-[#F8EDE3]'>
             <Navbar></Navbar>
             <div className="p-6 max-w-5xl mx-auto ">
 

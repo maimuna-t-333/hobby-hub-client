@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 
@@ -26,8 +26,11 @@ const GroupDetails = () => {
       <p className="mt-2 font-medium">Location: {group.location}</p>
       <p className="mt-2 font-medium">Max Members: {group.maxMembers}</p>
       <p className="mt-2 font-medium">Start Date: {group.startDate}</p>
+      <Link to='/allGroups'>
+        <button className="mt-6 btn bg-[#987070] text-white hover:bg-[#944E63]">Join Group</button>
+      </Link>
 
-      <button className="mt-6 btn bg-[#987070] text-white hover:bg-[#944E63]">Join Group</button>
+      
     </div>
     <Footer></Footer>
     </div>
