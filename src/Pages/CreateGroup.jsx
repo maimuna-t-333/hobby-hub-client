@@ -65,8 +65,6 @@ const CreateGroup = () => {
                         <input name="maxMembers" type="number" placeholder="Max Members" className="input input-bordered w-full" required />
                         <input name="startDate" type="date" className="input input-bordered w-full" required />
                         <input name="imageUrl" type="text" placeholder="Image URL" className="input input-bordered w-full" required />
-                        {/* <input name="userName" type="text" readOnly className="input input-bordered w-full bg-gray-100" /> */}
-                        {/* <input name="userEmail" type="email" readOnly className="input input-bordered w-full bg-gray-100" /> */}
                         <input name="userName" type="text" readOnly value={user?.displayName || ''} className="input input-bordered w-full bg-gray-100" />
                         <input name="userEmail" type="email" readOnly value={user?.email || ''} className="input input-bordered w-full bg-gray-100" />
 

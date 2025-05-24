@@ -1,27 +1,27 @@
 
 import React, { useContext } from 'react';
-import { Link} from 'react-router'; 
+import { Link } from 'react-router';
 import logo from '../assets/logo.png';
 import { AuthContext } from '../Context/AuthProvider';
 
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-   
+
     const handleLogout = () => {
         logOut()
-        .then(() => {
-            console.log('Logged out');
-        })
-        .catch((err) => {
-            console.error(err);
-        });
+            .then(() => {
+                console.log('Logged out');
+            })
+            .catch((err) => {
+                console.error(err);
+            });
     };
 
     return (
         <div className="">
             <div className="navbar bg-[#DBB5B5] shadow-sm p-6">
-               
+
                 <div className="navbar-start">
                     <div className="dropdown text-[#3A0519]">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -47,7 +47,7 @@ const Navbar = () => {
                     <img className="w-12 h-12 ml-2" src={logo} alt="HobbyHub Logo" />
                 </div>
 
-                
+
                 <div className="navbar-center space-x-4 text-[#3A0519] hidden md:flex">
                     <Link to="/">Home</Link>
                     <Link to="/allGroups">All Groups</Link>
@@ -59,14 +59,14 @@ const Navbar = () => {
                     )}
                 </div>
 
-            
+
                 <div className="navbar-end flex items-center gap-4">
 
                     {!user ? (
                         <Link className="text-[#3A0519] text-xl font-bold" to="/login">Login</Link>
                     ) : (
                         <div className="flex items-center gap-4">
-                         
+
                             <div className="tooltip tooltip-bottom" data-tip={user.displayName || 'User'}>
                                 <img
                                     src={user.photoURL || 'https://i.ibb.co/2n4d3kR/default-avatar.png'}

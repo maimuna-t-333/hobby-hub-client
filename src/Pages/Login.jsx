@@ -6,48 +6,48 @@ import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Context/AuthProvider';
 
 const Login = () => {
-    
 
-    const {signIn,googleLogIn}=useContext(AuthContext)
-    const [error, setError]=useState(null)
+
+    const { signIn, googleLogIn } = useContext(AuthContext)
+    const [error, setError] = useState(null)
     // console.log(signIn)
 
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
-    const handleLogin=(e)=>{
+    const handleLogin = (e) => {
         e.preventDefault();
-        const form=e.target;
-        const formData=new FormData(form)
-        const email=formData.get('email')
-        const password=formData.get('password')
-        console.log(email,password)
+        const form = e.target;
+        const formData = new FormData(form)
+        const email = formData.get('email')
+        const password = formData.get('password')
+        console.log(email, password)
 
 
-        signIn(email,password)
-        .then(res=>{
-            console.log('user created',res.user)
+        signIn(email, password)
+            .then(res => {
+                console.log('user created', res.user)
 
-            navigate('/')
-        })
-        .catch(error=>{
-            console.log(error)
-            setError('Invalid password or email.Please try again.')
-        })
-    }
-
-      const handleGoogleLogin=()=>{
-            googleLogIn()
-            .then(result=>{
-                const user=result.user
-                console.log(user)
-                
                 navigate('/')
             })
-            .catch(error=>{
+            .catch(error => {
+                console.log(error)
+                setError('Invalid password or email.Please try again.')
+            })
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogIn()
+            .then(result => {
+                const user = result.user
+                console.log(user)
+
+                navigate('/')
+            })
+            .catch(error => {
                 console.log(error)
                 setError('Invalid email or password.Please try again.')
             })
-        }
+    }
     return (
         <div className='bg-[#F8EDE3]'>
             <Navbar></Navbar>
@@ -55,7 +55,7 @@ const Login = () => {
                 <div className="card bg-base-100 w-[400px] mx-auto shrink-0 shadow-2xl ">
                     <div className="card-body">
                         <h1 className="text-4xl font-bold text-center">Login now!</h1>
-                         {error && <p className="text-red-500 mb-2">{error}</p>}
+                        {error && <p className="text-red-500 mb-2">{error}</p>}
                         <form onSubmit={handleLogin} className="fieldset">
                             <label className="label">Email</label>
                             <input name='email' type="email" className="input" placeholder="Email" />

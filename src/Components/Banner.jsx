@@ -26,7 +26,7 @@ const Banner = () => {
                     <img
                         src={write}
                         className="w-full" />
-                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                         <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-16 px-4">
                             “Writing is the quiet art of turning thoughts into legacy. <br /> Whether it's a poem, a journal, or a novel — your voice matters. <br /> Share your story.”
                         </h2>
@@ -40,9 +40,9 @@ const Banner = () => {
                     <img
                         src={paint}
                         className="w-full" />
-                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                         <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-16 px-4">
-                           “Color outside the lines. <br /> Painting is a language without words — <br /> a space where emotion meets imagination on every canvas.”
+                            “Color outside the lines. <br /> Painting is a language without words — <br /> a space where emotion meets imagination on every canvas.”
                         </h2>
                     </div>
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
@@ -54,9 +54,9 @@ const Banner = () => {
                     <img
                         src={cook}
                         className="w-full" />
-                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                         <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-16 px-4">
-                           “Cooking is where creativity meets comfort. <br /> Transform simple ingredients into unforgettable moments <br /> — one recipe, one memory, one flavor at a time.”
+                            “Cooking is where creativity meets comfort. <br /> Transform simple ingredients into unforgettable moments <br /> — one recipe, one memory, one flavor at a time.”
                         </h2>
                     </div>
                     <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">

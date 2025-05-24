@@ -33,7 +33,7 @@ const Register = () => {
         createUser(email, pass)
             .then(result => {
                 const user = result.user
-                 Swal.fire({
+                Swal.fire({
                     position: "top-end",
                     icon: "success",
                     title: "Your work has been saved",
@@ -43,14 +43,14 @@ const Register = () => {
                 console.log(user)
                 setUser(user)
                 navigate('/login')
-               
+
             })
             .catch(error => {
                 console.log(error)
                 setError('Please try Again!!')
             })
 
-    
+
 
     }
     const handleGoogleLogin = () => {

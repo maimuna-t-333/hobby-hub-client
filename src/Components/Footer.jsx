@@ -16,8 +16,8 @@ const Footer = () => {
                             <a href='https://www.facebook.com/'>
                                 <RiFacebookCircleLine size={26} />
                             </a>
-                            <a  href='https://www.instagram.com/'>
-                                <FaInstagram size={25}/>
+                            <a href='https://www.instagram.com/'>
+                                <FaInstagram size={25} />
 
                             </a>
                             <a href='https://www.youtube.com/'>

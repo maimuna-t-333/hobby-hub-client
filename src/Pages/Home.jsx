@@ -6,7 +6,7 @@ import Featured from '../Components/Featured';
 import { useLoaderData } from 'react-router';
 
 const Home = () => {
-    const hobbies=useLoaderData()
+    const hobbies = useLoaderData()
     console.log(hobbies)
     return (
         <div>
@@ -14,7 +14,7 @@ const Home = () => {
             <WhyJoin></WhyJoin>
             <Featured></Featured>
             <Challenges></Challenges>
-            
+
         </div>
     );
 };

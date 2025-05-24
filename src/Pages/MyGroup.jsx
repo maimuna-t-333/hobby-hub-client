@@ -9,14 +9,6 @@ const MyGroup = () => {
     const { user } = useContext(AuthContext);
     const [groups, setGroups] = useState([]);
 
-    //   useEffect(() => {
-    //     fetch('http://localhost:3000/hobby')
-    //       .then(res => res.json())
-    //       .then(data => {
-    //         const myGroups = data.filter(group => group.userEmail === user.email);
-    //         setGroups(myGroups);
-    //       });
-    //   }, [user]);
     useEffect(() => {
         if (user && user.email) {
             fetch('http://localhost:3000/hobby')
