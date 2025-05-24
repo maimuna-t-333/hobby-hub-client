@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 const GroupDetails = () => {
   const { id } = useParams();
@@ -14,8 +16,9 @@ const GroupDetails = () => {
   if (!group) return <p>Loading...</p>;
 
   return (
-    
-    <div className="max-w-3xl mx-auto p-6">
+    <div className='bg-[#F8EDE3]'>
+        <Navbar></Navbar>
+            <div className="max-w-3xl mx-auto p-6">
       <img src={group.imageUrl} alt={group.groupName} className="w-full h-64 object-cover rounded" />
       <h2 className="text-3xl font-bold mt-4">{group.groupName}</h2>
       <p className="mt-2 text-gray-600">{group.hobbyCategory}</p>
@@ -26,6 +29,9 @@ const GroupDetails = () => {
 
       <button className="mt-6 btn bg-[#987070] text-white hover:bg-[#944E63]">Join Group</button>
     </div>
+    <Footer></Footer>
+    </div>
+
   );
 };
 
