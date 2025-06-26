@@ -4,7 +4,7 @@ const WhyJoin = () => {
     return (
         <div>
             <section className="my-10 text-center text-[#3A0519]">
-                <h2 className="text-3xl font-bold mb-6">Why Join HobbyHub?</h2>
+                <h2 className="text-3xl font-bold mb-10">Why Join HobbyHub?</h2>
                 <div className="grid md:grid-cols-2  gap-6 place-items-center md:mx-70">
                     <div className="p-4 shadow-lg rounded bg-[#D5B4B4] h-[250px] w-full max-w-sm pt-20 
                  transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl hover:bg-[#fef3f3]

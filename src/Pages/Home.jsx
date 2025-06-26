@@ -4,6 +4,7 @@ import WhyJoin from '../Components/WhyJoin';
 import Challenges from '../Components/Challenges';
 import Featured from '../Components/Featured';
 import { useLoaderData } from 'react-router';
+import StatSection from '../Components/StatSection';
 
 const Home = () => {
     const hobbies = useLoaderData()
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <WhyJoin></WhyJoin>
             <Featured></Featured>
+            <StatSection></StatSection>
             <Challenges></Challenges>
 
         </div>

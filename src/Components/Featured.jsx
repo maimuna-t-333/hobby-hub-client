@@ -13,8 +13,8 @@ const Featured = () => {
 
     return (
         <div className="max-w-7xl mx-auto py-10 px-4">
-            <h1 className="text-3xl font-bold mb-6 text-center text-[#3A0519]">Featured Hobby Groups</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h1 className="text-3xl font-bold mb-10 text-center text-[#3A0519]">Featured Hobby Groups</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {hobbies.slice(0, 6).map(hobby => (
                     <FeaturedCard key={hobby._id} hobby={hobby} />
                 ))}
