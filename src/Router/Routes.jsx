@@ -14,6 +14,7 @@ import GroupDetails from "../Pages/GroupDetails";
 import PrivateRoute from "./PrivateRoute";
 import UpdateGroup from "../Pages/UpdateGroup";
 import AboutUs from "../Components/AboutUs";
+import Contact from "../Components/Contact";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path:'aboutUs',
                 element:<AboutUs></AboutUs>
+            },
+            {
+                path:'contact',
+                element:<Contact></Contact>
             }
         ]
     },
