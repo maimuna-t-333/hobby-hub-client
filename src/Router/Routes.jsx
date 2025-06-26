@@ -15,6 +15,7 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateGroup from "../Pages/UpdateGroup";
 import AboutUs from "../Components/AboutUs";
 import Contact from "../Components/Contact";
+import Support from "../Components/Support";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path:'contact',
                 element:<Contact></Contact>
+            },
+            {
+                path:'support',
+                element:<Support></Support>
             }
         ]
     },
