@@ -1,18 +1,18 @@
 import React from 'react';
-import knit from '../assets/to-knit-748168_1280.jpg'
-import write from '../assets/Writting.jpg'
-import paint from '../assets/Painting.jpg'
-import cook from '../assets/cookiing.jpg'
+import knit from '../assets/knit.jpg'
+import write from '../assets/Write.jpg'
+import paint from '../assets/Paint.jpg'
+import cook from '../assets/cook.jpg'
 
 const Banner = () => {
     return (
         <div>
-            <div className="carousel w-full h-[600px]">
+            <div className="carousel w-full h-[500px]">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img
                         src={knit}
-                        className="w-full" />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        className="w-full h-full object-cover" />
+                    <div className="absolute inset-0  flex items-center justify-center">
                         <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-16 px-4 ">
                             “Weaving calm into every stitch <br /> — knitting is more than a craft, it’s a rhythm for the soul. <br /> Create warmth, one loop at a time.”
                         </h2>
@@ -25,8 +25,8 @@ const Banner = () => {
                 <div id="slide2" className="carousel-item relative w-full">
                     <img
                         src={write}
-                        className="w-full" />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        className="w-full h-full object-cover" />
+                    <div className="absolute inset-0  flex items-center justify-center">
                         <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-16 px-4">
                             “Writing is the quiet art of turning thoughts into legacy. <br /> Whether it's a poem, a journal, or a novel — your voice matters. <br /> Share your story.”
                         </h2>
@@ -39,8 +39,8 @@ const Banner = () => {
                 <div id="slide3" className="carousel-item relative w-full">
                     <img
                         src={paint}
-                        className="w-full" />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 flex items-center justify-center">
                         <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-16 px-4">
                             “Color outside the lines. <br /> Painting is a language without words — <br /> a space where emotion meets imagination on every canvas.”
                         </h2>
@@ -53,8 +53,8 @@ const Banner = () => {
                 <div id="slide4" className="carousel-item relative w-full">
                     <img
                         src={cook}
-                        className="w-full" />
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                        className="w-full h-full object-cover" />
+                    <div className="absolute inset-0  flex items-center justify-center">
                         <h2 className="text-white text-2xl md:text-3xl font-bold text-center mb-16 px-4">
                             “Cooking is where creativity meets comfort. <br /> Transform simple ingredients into unforgettable moments <br /> — one recipe, one memory, one flavor at a time.”
                         </h2>
