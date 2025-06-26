@@ -8,7 +8,7 @@ const GroupDetails = () => {
     const [group, setGroup] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/hobby/${id}`)
+        fetch(`https://hobby-hub-server-psi.vercel.app/hobby/${id}`)
             .then(res => res.json())
             .then(data => setGroup(data));
     }, [id]);

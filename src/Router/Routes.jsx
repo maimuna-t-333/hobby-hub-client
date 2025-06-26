@@ -13,6 +13,7 @@ import Error from "../Pages/Error";
 import GroupDetails from "../Pages/GroupDetails";
 import PrivateRoute from "./PrivateRoute";
 import UpdateGroup from "../Pages/UpdateGroup";
+import AboutUs from "../Components/AboutUs";
 
 const router = createBrowserRouter([
     {
@@ -22,11 +23,15 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home></Home>,
-                loader:()=>fetch('http://localhost:3000/hobby'),
+                loader:()=>fetch('https://hobby-hub-server-psi.vercel.app/hobby'),
             },
             {
                 path: 'allGroups',
                 element: <AllGroup></AllGroup>
+            },
+            {
+                path:'aboutUs',
+                element:<AboutUs></AboutUs>
             }
         ]
     },

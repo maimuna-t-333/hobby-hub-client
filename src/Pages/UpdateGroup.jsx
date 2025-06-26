@@ -13,7 +13,7 @@ const UpdateGroup = () => {
     const [group, setGroup] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/hobby/${id}`)
+        fetch(`https://hobby-hub-server-psi.vercel.app/hobby/${id}`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Group not found or server error');
@@ -41,7 +41,7 @@ const UpdateGroup = () => {
             description: form.description.value,
         };
 
-        fetch(`http://localhost:3000/hobby/${id}`, {
+        fetch(`https://hobby-hub-server-psi.vercel.app/hobby/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updated),

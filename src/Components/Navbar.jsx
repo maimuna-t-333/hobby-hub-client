@@ -31,10 +31,13 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-300 rounded-box z-10 mt-3 w-52 p-2 shadow text-[#3A0519]"
+                            className="menu menu-sm dropdown-content bg-base-300 rounded-box z-10 mt-3 w-52 p-2 shadow text-[#3A0519] "
                         >
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/allGroups">All Groups</Link></li>
+                            <li><Link to="/aboutUs">About us</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
+                            <li><Link to="/support">Support</Link></li>
                             {user && (
                                 <>
                                     <li><Link to="/createGroup">Create Group</Link></li>
@@ -51,6 +54,9 @@ const Navbar = () => {
                 <div className="navbar-center space-x-4 text-[#3A0519] hidden md:flex">
                     <Link to="/">Home</Link>
                     <Link to="/allGroups">All Groups</Link>
+                    <li><Link to="/aboutUs">About us</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/support">Support</Link></li>
                     {user && (
                         <>
                             <Link to="/createGroup">Create Group</Link>

@@ -5,7 +5,7 @@ const Featured = () => {
     const [hobbies, setHobbies] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/hobby')
+        fetch('https://hobby-hub-server-psi.vercel.app/hobby')
             .then(res => res.json())
             .then(data => setHobbies(data))
             .catch(err => console.error(err));
