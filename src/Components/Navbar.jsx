@@ -19,8 +19,8 @@ const Navbar = () => {
     };
 
     return (
-        <div className="">
-            <div className="navbar bg-[#DBB5B5] shadow-sm p-6">
+        <div className="sticky top-0 z-50">
+            <div className="navbar bg-[#DBB5B5] shadow-sm p-6 ">
 
                 <div className="navbar-start">
                     <div className="dropdown text-[#3A0519]">
@@ -54,9 +54,9 @@ const Navbar = () => {
                 <div className="navbar-center space-x-4 text-[#3A0519] hidden md:flex">
                     <Link to="/">Home</Link>
                     <Link to="/allGroups">All Groups</Link>
-                    <li><Link to="/aboutUs">About us</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/support">Support</Link></li>
+                    <Link to="/aboutUs">About us</Link>
+                    <Link to="/contact">Contact</Link>
+                    <Link to="/support">Support</Link>
                     {user && (
                         <>
                             <Link to="/createGroup">Create Group</Link>
