@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
-import Navbar from '../Components/Navbar';
+// import Navbar from '../Components/Navbar';
 import Swal from 'sweetalert2';
-import { AuthContext } from '../Context/AuthProvider';
+import { AuthContext } from '../../Context/AuthProvider';
+import Navbar from '../../Components/Navbar';
 
 
 const CreateGroup = () => {
@@ -37,8 +38,8 @@ const CreateGroup = () => {
             })
     }
     return (
-        <div className='bg-[#e1f2db]'>
-            <Navbar></Navbar>
+        <div className=''>
+            
             <div className='max-w-7xl mx-auto pb-30 pt-10'>
                 <div className="text-center mb-10">
                     <h1 className="text-4xl font-bold text-[#3A0519]">Create a New Hobby Group</h1>

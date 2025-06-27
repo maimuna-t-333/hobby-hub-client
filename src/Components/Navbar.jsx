@@ -40,8 +40,8 @@ const Navbar = () => {
                             <li><Link to="/support">Support</Link></li>
                             {user && (
                                 <>
-                                    <li><Link to="/createGroup">Create Group</Link></li>
-                                    <li><Link to="/myGroup">My Groups</Link></li>
+                                    <li><Link to="/dashBoard">DashBoard</Link></li>
+                                    {/* <li><Link to="/myGroup">My Groups</Link></li> */}
                                 </>
                             )}
                         </ul>
@@ -59,8 +59,8 @@ const Navbar = () => {
                     <Link to="/support">Support</Link>
                     {user && (
                         <>
-                            <Link to="/createGroup">Create Group</Link>
-                            <Link to="/myGroup">My Groups</Link>
+                           <Link to="/dashBoard">DashBoard</Link>
+                            {/* <Link to="/myGroup">My Groups</Link> */}
                         </>
                     )}
                 </div>

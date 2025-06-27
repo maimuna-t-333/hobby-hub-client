@@ -8,9 +8,12 @@ const Footer = () => {
     return (
         <div>
             <footer className="footer footer-horizontal footer-center  text-[#3A0519] p-10 bg-[#F1E5D1]">
-                <aside>
-                    <img className='w-30 h-30' src={logo} alt="" />
-                    <nav>
+                <aside >
+                    <div>
+                        <img className='w-30 h-30' src={logo} alt="" />
+                    </div>
+                    <div>
+
                         <p className='font-semibold mb-3'>Follow us on</p>
                         <div className="grid grid-flow-col gap-4 mb-4">
                             <a href='https://www.facebook.com/'>
@@ -24,10 +27,17 @@ const Footer = () => {
                                 <SlSocialYoutube size={26} />
                             </a>
                         </div>
-                    </nav>
-                    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
-                </aside>
 
+                        <div>
+                            
+                        </div>
+
+                    </div>
+
+
+
+                </aside>
+                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
             </footer>
 
 

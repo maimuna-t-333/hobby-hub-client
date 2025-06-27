@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
-import { AuthContext } from '../Context/AuthProvider';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+import { AuthContext } from '../../Context/AuthProvider';
+import Navbar from '../../Components/Navbar';
+import Footer from '../../Components/Footer';
 
 const MyGroup = () => {
     const { user } = useContext(AuthContext);
@@ -46,7 +46,7 @@ const MyGroup = () => {
 
     return (
         <div className='bg-[#F8EDE3]'>
-            <Navbar></Navbar>
+            
             <div className="p-6 max-w-5xl mx-auto ">
 
                 <h2 className="text-4xl font-bold mb-8 text-center">My Groups</h2>
@@ -82,7 +82,7 @@ const MyGroup = () => {
                 </table>
 
             </div>
-            <Footer></Footer>
+          
         </div>
     );
 };
