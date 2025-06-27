@@ -77,7 +77,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/group/:id',
-        element: <PrivateRoute><GroupDetails></GroupDetails></PrivateRoute>
+        element: <GroupDetails></GroupDetails>
     },
     {
         path: '/updateGroup/:id',
