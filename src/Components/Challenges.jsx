@@ -32,7 +32,7 @@ const events = [
 const Challenges = () => {
     return (
         <div>
-            <section className="my-14 px-6 max-w-5xl mx-auto text-[#3A0519]">
+            <section className="my-14 px-6 w-10/12 mx-auto text-[#3A0519]">
                 <h2 className="text-4xl font-bold text-center mb-10"> Upcoming Events</h2>
                 <div className="relative border-[#944E63] border-l-4  pl-6 space-y-10">
                     {events.map((event, index) => (

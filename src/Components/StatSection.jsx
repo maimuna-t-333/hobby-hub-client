@@ -8,7 +8,7 @@ const StatSection = () => {
 
   return (
     <section className="bg-[#F8EDE3] py-16" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="w-10/12 mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-[#3A0519] mb-4">HobbyHub Impact</h2>
         <p className="text-gray-600 mb-12 text-lg">
           Our growing community is a testament to the power of shared passions.
